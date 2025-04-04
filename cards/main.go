@@ -2,18 +2,20 @@ package main
 
 import "fmt"
 
-// main is the entry point of the application.
-// It initializes a card using the newCard function and prints it.
 func main() {
-	// Use of explicit type declaration for clarity and readability.
-	// Avoid using short variable declaration (:=) for package-level variables or when clarity is important.
-	var card string = newCard()
+	// Create a slice of cards and initialize with a few values
+	var cards = []string{newCard(), "Two of Spades", "Ace of Diamonds"}
 
-	fmt.Println(card)
+	// Append a new card to the slice
+	cards = append(cards, "Three of Hearts")
+
+	// Loop through the cards and print each one with its index
+	for i, card := range cards {
+		fmt.Println(i, card)
+	}
 }
 
-// newCard returns a string representing a playing card.
-// This function can later be extended to return random or user-defined cards.
+// newCard returns a predefined card as a string
 func newCard() string {
 	return "Five of Diamonds"
 }
