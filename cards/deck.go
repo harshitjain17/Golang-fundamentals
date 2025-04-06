@@ -25,3 +25,8 @@ func (d deck) print() {
 		fmt.Println(i, card)
 	}
 }
+
+// Deal a hand of cards from the deck
+func deal(d deck, handSize int) (deck, deck) {
+	return d[:handSize], d[handSize:]
+}
