@@ -15,4 +15,8 @@ func main() {
 	hand.print()
 	fmt.Println("Remaining Deck:")
 	remainingDeck.print()
+
+	// Convert the deck to a string and print it
+	fmt.Println("Deck as string:")
+	fmt.Println(cards.toString())
 }
