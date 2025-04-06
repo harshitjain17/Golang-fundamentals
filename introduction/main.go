@@ -52,5 +52,6 @@ import "fmt"
 
 // Declare the main function: main is the entry point of the application
 func main() {
-	fmt.Println("Hello, World!")
+   var i int = 0
+   fmt.Printf("Hello %d, World!", i)
 }
