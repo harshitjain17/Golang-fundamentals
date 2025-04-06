@@ -16,7 +16,12 @@ func main() {
 	fmt.Println("Remaining Deck:")
 	remainingDeck.print()
 
-	// Convert the deck to a string and print it
-	fmt.Println("Deck as string:")
-	fmt.Println(cards.toString())
+	// Save the deck to a file
+	err := cards.saveToFile("my_cards.txt")
+	if err != nil {
+		fmt.Println("Error saving to file:", err)
+	} else {
+		fmt.Println("Deck saved to my_cards.txt")
+	}
+
 }

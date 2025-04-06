@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"os"
 	"strings"
 )
 
@@ -37,4 +38,10 @@ func deal(d deck, handSize int) (deck, deck) {
 // Convert the deck to a string representation
 func (d deck) toString() string {
 	return strings.Join([]string(d), ",")
+}
+
+// Save the deck to a file with the given filename
+func (d deck) saveToFile(filename string) error {
+	data := d.toString()
+	return os.WriteFile(filename, []byte(data), 0666)
 }
