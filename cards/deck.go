@@ -45,3 +45,13 @@ func (d deck) saveToFile(filename string) error {
 	data := d.toString()
 	return os.WriteFile(filename, []byte(data), 0666)
 }
+
+// Load a deck from a file with the given filename
+func newDeckFromFile(filename string) (deck, error) {
+	bs, err := os.ReadFile(filename)
+	if err != nil {
+		fmt.Println("Error reading file:", err)
+		return nil, err
+	} 
+	return deck(strings.Split(string(bs), ",")), nil
+}

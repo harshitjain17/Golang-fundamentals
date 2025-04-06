@@ -24,4 +24,13 @@ func main() {
 		fmt.Println("Deck saved to my_cards.txt")
 	}
 
+	// Load the deck from the file
+	loadedDeck, err := newDeckFromFile("my_cards.txt")
+	if err != nil {
+		fmt.Println("Error loading from file:", err)
+	} else {
+		fmt.Println("Loaded Deck:")
+		loadedDeck.print()
+	}
+
 }
