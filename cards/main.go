@@ -33,4 +33,7 @@ func main() {
 		loadedDeck.print()
 	}
 
+	// Shuffle the deck
+	cards.shuffle()
+	cards.print()
 }

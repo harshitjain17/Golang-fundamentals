@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"math/rand"
 	"os"
 	"strings"
 )
@@ -54,4 +55,12 @@ func newDeckFromFile(filename string) (deck, error) {
 		return nil, err
 	} 
 	return deck(strings.Split(string(bs), ",")), nil
+}
+
+// Shuffle the deck of cards using the Fisher-Yates shuffle algorithm
+func (d deck) shuffle() {
+	for i := range d {
+		newPosition := rand.Intn(len(d) - 1)
+		d[i], d[newPosition] = d[newPosition], d[i]
+	}
 }
