@@ -1,28 +1,48 @@
 package main
 
-type englishBot struct{}
-type spanishBot struct{}
+import "fmt"
 
-type bot interface {
-	getGreeting() string
+// shape defines a common interface for geometric shapes.
+type shape interface {
+	getArea() float64
+}
+
+// triangle represents a triangle with height and base.
+type triangle struct {
+	height float64
+	base   float64
+}
+
+// square represents a square with a given side length.
+type square struct {
+	sideLength float64
 }
 
 func main() {
-	eb := englishBot{} // Create an instance of englishBot
-	sb := spanishBot{} // Create an instance of spanishBot
+	t1 := triangle{
+		height: 2,
+		base:   3,
+	}
 
-	printGreeting(eb) // Call the printGreeting function with eb
-	printGreeting(sb) // Call the printGreeting function with sb
+	s1 := square{
+		sideLength: 4,
+	}
+
+	printArea(t1)
+	printArea(s1)
 }
 
-func printGreeting(b bot) {
-	println(b.getGreeting())
+// getArea calculates the area of a triangle.
+func (t triangle) getArea() float64 {
+	return 0.5 * t.base * t.height
 }
 
-func (eb englishBot) getGreeting() string {
-	return "Hello!"
+// getArea calculates the area of a square.
+func (s square) getArea() float64 {
+	return s.sideLength * s.sideLength
 }
 
-func (sb spanishBot) getGreeting() string {
-	return "Hola!"
+// printArea prints the area of any shape that implements the shape interface.
+func printArea(s shape) {
+	fmt.Println(s.getArea())
 }
