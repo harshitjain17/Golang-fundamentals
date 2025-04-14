@@ -3,7 +3,7 @@
 Welcome to the **Golang Fundamentals** repository! This project is a hands-on exploration of Go programming through a series of exercises and mini-projects. It serves as a practical guide for learning key features of the Go language such as data structures, interfaces, concurrency, and more.
 
 
-# 📦 Projects & Topics Covered
+## Projects & Topics Covered
 
 ### 🃏 Cards Project
 
