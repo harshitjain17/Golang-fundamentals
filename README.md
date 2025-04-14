@@ -79,8 +79,7 @@ Practiced creating, modifying, and iterating over Go maps. Also handled:
 **Key File:**
 - `main.go` (map operations)
 
----
 
-### 🧠 Summary
+## 🧠 Summary
 
 This repo serves as a comprehensive journey through Go's core features, blending theory with practical implementation. From creating card games to handling concurrency with goroutines and channels, it provides a strong foundation for building robust applications in Go.
