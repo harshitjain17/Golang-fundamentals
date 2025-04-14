@@ -2,9 +2,8 @@
 
 Welcome to the **Golang Fundamentals** repository! This project is a hands-on exploration of Go programming through a series of exercises and mini-projects. It serves as a practical guide for learning key features of the Go language such as data structures, interfaces, concurrency, and more.
 
----
 
-## 📦 Projects & Topics Covered
+# 📦 Projects & Topics Covered
 
 ### 🃏 Cards Project
 
@@ -27,6 +26,7 @@ A command-line Go application that simulates operations on a standard 52-card de
 go run main.go deck.go
 go test
 ```
+---
 
 ### 🕸️ Goroutines & Channels
 
@@ -40,6 +40,7 @@ Learned how to use goroutines and channels to build concurrent Go programs. A sa
 **Key File:**
 - `main.go` (website checker)
 
+---
 
 ### 🔁 Interfaces
 
@@ -51,6 +52,7 @@ Demonstrates polymorphism using a `bot` interface with different implementations
 **2. Shape Area Calculator**  
 Demonstrates how structs like `triangle` and `square` implement a `shape` interface to calculate area differently.
 
+---
 
 ### 🧱 Structs & Pointers
 
@@ -64,6 +66,7 @@ Built a `person` struct with nested `contactInfo`, showcasing:
 **Key File:**
 - `main.go` (person struct and pointer methods)
 
+---
 
 ### 🗺️ Maps
 
@@ -76,6 +79,7 @@ Practiced creating, modifying, and iterating over Go maps. Also handled:
 **Key File:**
 - `main.go` (map operations)
 
+---
 
 ### 🧠 Summary
 
